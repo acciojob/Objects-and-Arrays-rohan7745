@@ -8,7 +8,33 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+	  <script>
+		  const players = ["John", "Bob", "Alice", "Poppy"];
+const person = {
+  name: "John Doe",
+  age: 80,
+};
+
+// Create a reference to the array players
+const team = players;
+
+// Create a copy of the array players using the spread operator
+const team1 = [...players];
+
+// Create a copy of the object person using Object.assign
+const cap1 = Object.assign({}, person);
+
+// Modify players and person to verify that copies are independent
+players.push("George");
+person.name = "Jane Smith";
+
+console.log(team);  // Output: ["John", "Bob", "Alice", "Poppy", "George"]
+console.log(team1); // Output: ["John", "Bob", "Alice", "Poppy"]
+console.log(cap1);  // Output: { name: "John Doe", age: 80 }
+
+	  </script>
     <!-- the entire body must be written by student -->
     <script src="./script.js"></script>
+	  
   </body>
 </html>
